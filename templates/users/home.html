@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{%block content %}
+
+{%if user.is_authenticated%}
+<p>You are logged In</p>
+<a href="{% url 'users:logout'%}">Logout</a>
+{%endif%}
+<h1>Home</h1>
+<img src="{% static 'users/images/me.jpg' %}" alt="my pic" width="400">
+
+{%endblock content %}
